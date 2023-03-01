@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Picker" parent="Theme.AppCompat.Light.NoActionBar" >
-        <item name="android:textColorPrimary">@android:color/lineColor</item>
-        <item name="colorControlNormal">@android:color/lineColor</item>
+        <item name="android:textColorPrimary">@color/lineColor</item>
+        <item name="colorControlNormal">@color/lineColor</item>
     </style>
     <style name="DarkStyle" parent="Theme.AppCompat.Dialog.Alert">
         <item name="android:textColor">#d6d3d1</item>
