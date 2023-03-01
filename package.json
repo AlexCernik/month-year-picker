@@ -1,0 +1,43 @@
+{
+  "name": "month-year-picker",
+  "title": "React Native Month/Year Picker",
+  "version": "1.9.0",
+  "description": "React Native Month/Year Picker component for Android",
+  "main": "src/index.js",
+  "types": "index.d.ts",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlexCernik/month-year-picker.git"
+  },
+  "keywords": [
+    "month-picker",
+    "month-year-picker",
+    "android"
+  ],
+  "author": {
+    "name": "Alex Cernik",
+    "email": "cheernyk@gmail.com"
+  },
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
+  "peerDependencies": {
+    "react": ">= 16.11.0",
+    "react-native": ">= 0.60.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@babel/runtime": "^7.20.0",
+    "@semantic-release/git": "^10.0.1",
+    "babel-plugin-module-resolver": "^5.0.0",
+    "metro-react-native-babel-preset": "0.73.7",
+    "react": "18.2.0",
+    "react-native": "0.71.3",
+    "semantic-release": "^20.1.1"
+  },
+  "dependencies": {
+    "invariant": "^2.2.4",
+    "moment": "^2.29.4"
+  }
+}
