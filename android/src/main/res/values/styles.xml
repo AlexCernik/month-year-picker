@@ -5,7 +5,7 @@
         <item name="colorControlNormal">@color/lineColor</item>
     </style>
     <style name="DarkStyle" parent="Theme.AppCompat.Dialog.Alert">
-        <item name="android:textColor">#d6d3d1</item>
+        <item name="android:textColor">#9ca3af</item>
         <item name="android:background">#1f2937</item>
         <item name="android:textAllCaps">false</item>
     </style>
