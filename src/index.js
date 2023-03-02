@@ -1,4 +1,4 @@
-import MYPicker from './MYPicker.android';
+import MYPicker from './MYPicker';
 export * from './constants';
 
 export default MYPicker;

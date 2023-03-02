@@ -22,6 +22,7 @@ const MYPicker = ({
     value: value.getTime(),
     minimumDate: minimumDate?.getTime() ?? null,
     maximumDate: maximumDate?.getTime() ?? null,
+    darkTheme: false,
     ...restProps,
   }).then(
     ({ action, year, month }) => {
