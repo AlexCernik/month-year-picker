@@ -14,34 +14,40 @@ const MYPicker = ({
   onChange,
   minimumDate,
   maximumDate,
+  isOpen,
+  onClose,
   ...restProps
 }) => {
   invariant(value, 'value prop is required!');
 
-  RNMYPickerDialogModule.open({
-    value: value.getTime(),
-    minimumDate: minimumDate?.getTime() ?? null,
-    maximumDate: maximumDate?.getTime() ?? null,
-    darkTheme: false,
-    ...restProps,
-  }).then(
-    ({ action, year, month }) => {
-      let date;
-      switch (action) {
-        case ACTION_DATE_SET:
-        case ACTION_NEUTRAL:
-          date = moment(`${month}-${year}`, NATIVE_FORMAT).toDate();
-          break;
-        case ACTION_DISMISSED:
-        default:
-          date = undefined;
-      }
-      onChange && onChange(action, date);
-    },
-    error => {
-      throw error;
-    },
-  );
+  if (isOpen) {
+    RNMYPickerDialogModule.open({
+      value: value.getTime(),
+      minimumDate: minimumDate?.getTime() ?? null,
+      maximumDate: maximumDate?.getTime() ?? null,
+      darkTheme: false,
+      ...restProps,
+    }).then(
+      ({ action, year, month }) => {
+        let date;
+        switch (action) {
+          case ACTION_DATE_SET:
+            onClose();
+            case ACTION_NEUTRAL:
+            date = moment(`${month}-${year}`, NATIVE_FORMAT).toDate();
+            break;
+          case ACTION_DISMISSED:
+            onClose();
+          default:
+            date = undefined;
+        }
+        onChange && onChange(date);
+      },
+      error => {
+        throw error;
+      },
+    );
+  }
 
   return null;
 };
